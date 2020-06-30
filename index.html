@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Joyousness 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130919
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			
+		</div>
+		<div id="menu">
+			<ul>
+				<!--<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li> -->
+				<li><a href="https://www.cs.waikato.ac.nz/ml/weka/index.html" accesskey="2" title="">Dowload Weka</a></li>
+				<!--<li><a href="#" accesskey="3" title="">About Us</a></li>
+				<li><a href="#" accesskey="4" title="">Careers</a></li>
+				<li><a href="#" accesskey="5" title="">Contact Us</a></li> -->
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="welcome" class="wrapper-style1">
+		<div class="title">
+			<h2>Manual Weka</h2>
+			<span class="byline"></span> </div>
+		<p><b> Weka é uma coleção de algoritmos de aprendizado de máquina para tarefas de mineração de dados. Ele contém ferramentas para preparação de dados, classificação, regressão, agrupamento, mineração de regras de associação e visualização.
+				Encontrada apenas nas ilhas da Nova Zelândia, a Weka é uma ave que não voa e tem uma natureza inquisitiva. O nome é pronunciado assim, e o pássaro soa assim.
+				No site, existem vários cursos on-line gratuitos que ensinam aprendizado de máquina e mineração de dados usando o Weka. Confira no site os cursos para detalhes sobre quando e como se inscrever. Os vídeos dos cursos estão disponíveis no Youtube.
+			</b>
+		</p>
+	</div>
+	<div id="page" class="container">
+		<div id="content">
+			<div class="title">
+				<h2>Instalação e Geração de Arquivo ARFF</h2>
+			<p> </p>
+			
+		</div>
+		
+	<div id="footer" class="container">
+	<div>
+		<div>
+			<p><strong>Para instalação do Weka utilize o este link <a href="https://waikato.github.io/weka-wiki/downloading_weka/">Clique aqui</strong></a></p>
+			<h2>Geração de Arquivo ARFF</h2>
+			<p><b>Suponhamos que tenhamos alguns dados para gerar regras de associação ou para classificar, estes dados por sua vez, podem estar armazenados na forma de uma planilha ou de um banco de dados. Como fzer para utilizar estes dados no Weka?</p>
+			<p>O Weka possui um formato próprio, o ARRFF  o qual temos que descrever o domínio do atributo,
+			pois o mesmo não pode ser obtido automaticamente pelo seu valor. Antes de aplicar os dados a qualquer
+			algoritmo do pacote Weka estes devem ser convertidos para o formato ARFF que consiste basicamente de
+			duas partes:
+			</p>
+			<p><li>A primeira contém uma lista de todos os atributos, onde devemos definir o tipo do
+				atributo ou os valores que ele pode representar. Quando utilizamos os valores estes
+				devem estar entre “{ }“ separados por vírgulas.
+				</li>
+				<li>
+				A segunda parte consiste das instâncias, ou seja, os registros a serem minerados com o
+				valor dos atributos para cada instancia separado por vírgula. A ausência de um item em
+				um registro deve ser atribuída pelo símbolo “?”.
+				</b>
+				</li>
+			</p>
+			<p><b>
+				A geração de um arquivo a partir de planilhas eletrônicas ou banco de dados é possível através
+				da exportação de dados para arquivos CSV. Uma vez feito isso, é necessário apenas carregar o arquivo em
+				um editor de texto e adicionar o nome do conjunto de dados usando os descritores do arquivo e dos atributos
+				conforme a regra:
+					<li>@relation nome_do_conjuto_de_dados;</li>
+					<li>@attribute nome do atributo seguido do seu tipo;</li>
+					<li>@data e logo em seguida os dados em si.</li>
+					<li>Em seguida deve-se salvar o arquivo como texto puro com extensão ARFF.</li>
+				</b>
+				<a href="#" class="image fit"><img src="images/Capturar.PNG" alt="figura1"></a>
+			</p>
+			<p>
+				<b>
+					No exemplo a seguir, temos os dados armazenados em uma planilha do Microsoft Excel. Para
+					salvar em modo texto no exemplo utilizou-se o editor Microsoft Word. Podemos utilizar outros programas
+					para converter os dados para o formato ARFF. A Figura 1 mostra uma planilha do Microsoft Excel
+					contendo os dados atmosféricos.
+					Para gerarmos um arquivo onde os dados serão separados por vírgula devemos clicar menu usar
+					a opção Salvar como. Na caixa de diálogo Salvar como tipo selecionar a opção CSV (separado por vírgulas)
+					digitamos o nome do arquivo e clicamos no botão Salvar, a mensagem que vem a seguir (arquivo.csv pode
+					conter recursos que não sejam compatíveis com CSV (separado por virgula). Deseja manter a pasta neste
+					formato?) clique em Sim.
+				</b>
+				<br />
+				<a href="#" class="image fit"><img src="images/Captura2.PNG" alt="figura2"></a>
+			</p>
+			<p>
+				<b>
+					Em seguida, abrir o arquivo com o Microsoft Word, onde a primeira linha representa o
+					cabeçalho das colunas, ou seja, o nome dos atributos sendo separados por vírgula como mostrado na Figura
+					2. As linhas seguintes representam os registros onde cada atributo do registro está separado por virgula.
+					Devemos acrescentar o cabeçalho do arquivo ARFF como mostrado na Figura 3. Temos então
+					na primeira linha o nome do conjunto de dados atribuído pelo comando @relation
+					nome_do_conjuto_de_dados, em seguida temos a relação dos atributos, onde colocamos o nome do atributo
+					e tipo ou seus possíveis valores, definido por @attribute nome_do_atributo tipo ou {valores}, na seção dos
+					dados colocamos o comando @data e nas próximas linhas colocamos os registros onde cada linha
+					representa um registro.
+					<p>
+						O passo seguinte é gravar o arquivo, para isso selecionamos no menu Arquivo a opção Salvar
+						como... no menu Salvar como tipo selecione a opção Somente texto com quebra de linha, em Nome do
+						arquivo digite o nome do arquivo com a extensão arf
+					</p>
+				</b>
+				<br />
+				<a href="#" class="image fit"><img src="images/Captura3.PNG" alt="figura3"></a>
+			</p>			
+	</div>	
+</div>
+</body>
+</html>
